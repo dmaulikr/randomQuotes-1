@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     
 
     @IBOutlet weak var ribbon: UIImageView!
-    @IBOutlet weak var dailyQuoteTextView: UITextView!    
+    @IBOutlet weak var dailyQuoteTextView: QuoteTextView!
     @IBOutlet weak var dailyQuoteAuthor: UILabel!
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var saveQuoteButton: UIButton!

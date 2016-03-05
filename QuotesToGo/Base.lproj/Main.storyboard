@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="228" id="JjL-mA-3un"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Failure will never overtake me if my determination to succeed is strong." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TV8-HK-TGK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Failure will never overtake me if my determination to succeed is strong." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TV8-HK-TGK" customClass="QuoteTextView" customModule="QuotesToGo" customModuleProvider="target">
                                 <rect key="frame" x="127" y="321" width="347" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="347" id="Hfl-QO-BDn"/>
