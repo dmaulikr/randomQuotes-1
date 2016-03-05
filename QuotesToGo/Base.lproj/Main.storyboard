@@ -63,6 +63,9 @@
                                 <state key="normal" title="SAVE QUOTE">
                                     <color key="titleColor" white="0.5427529498150474" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVO-1Z-2hu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sir Ken Robinson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaT-vJ-kOc">
                                 <rect key="frame" x="0.0" y="379" width="600" height="21"/>
