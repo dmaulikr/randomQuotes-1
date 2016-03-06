@@ -56,33 +56,31 @@ class WelcomeViewController: UIViewController {
         chooseRandomQuote() 
     }
     
-
     @IBAction func saveRandomQuote(sender: AnyObject) {
-        
         let button = sender as! UIButton
-        button.setTitle("Saving ...", forState: .Normal)
-        button.enable = false
+        button.setTitle("SAVING ...", forState: .Normal)
+        button.enabled = false
         getStartedButton.enabled = false
         
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animateWithDuration(0.2) { () -> Void in
             button.backgroundColor = UIColor(red: 0.6, green: 0.84, blue: 0.29, alpha: 1)
             button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        },
-        
+        }
         
         let quote = CoreDataHelper.insertManagedObject(NSStringFromClass(Quote), managedObjectContext: moc) as! Quote
         quote.content = selectedRandomQuote["quote"]
         quote.createdAt = NSDate()
-        
+  
         AuthorManager.addAuthor(selectedRandomQuote["author"]!) { (author:Author!) -> () in
             quote.author = author
             try! self.moc.save()
-        
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                button.setTitle("Quote Saved", forState: .Normal)
-          //Move to overview
             
-        })
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                button.setTitle("QUOTE SAVED", forState: .Normal)
+//                self.performSegueWithIdentifier("getStarted", sender: self)
+            })
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
